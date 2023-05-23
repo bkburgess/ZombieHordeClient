@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Horde</title>
+        <link href="./stylesheets/reset.css", rel="stylesheet", type="text/css">
+        <link href="./stylesheets/style.css", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Open+Sans", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Mynerve", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Rock+Salt", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Gloria+Hallelujah", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Permanent+Marker", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Carter+One", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Creepster", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Kalam", rel="stylesheet", type="text/css">
+        <link href="https://fonts.googleapis/css?family=Alkatra", rel="stylesheet", type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <h1>
+                    <a href="">Horde</a>
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div class="main-content">
+                <h2>Welcome to the Horde. Will you be able to survive the onslaught?</h2> <br>
+                <!--<a href="./html/play.html"><button name="play">Ready to Play</button></a>-->
+                <a href="./html/selectDeck.html"><button id="upload">Select Deck and Play</button></a>
+                <button id="api-test">test api</button>
+
+                <div class="rules">
+                    <h2>Description and Rules</h2>
+                    <p>Horde is a format of Magic: The Gathering that allows one or more players to cooperatively fight against the Horde. 
+                        Each person brings a deck (usually EDH), and the horde deck is specially constructed to be easy to automatically pilot. The iconic horde is for zombies, but you can also have an eldrazi horde, elementals, artifacts, or anything else</p>
+                    <p>Horde has many variants and custom rules implemented by its players to tweak the gameplay experience. Here is a basic ruleset to get you started, with some alternates to tweak the experience</p>
+                    <h3>Flow and basic operation of the Horde</h3>
+                    <ul>
+                        <li>The Survivors (players) all take their turns simultaneously, and share a life total that scales with the number of Survivors. 40 for the first Survivor, plus 10 for each additional Survivor</li>
+                        <li>Turn order alternates between the the Survivors and the Horde, but the Survivors get three full turns before the Horde takes its first turn</li>
+                        <li>The Horde does not have a life total, but rather the Survivors win when the Horde has no library, no hand, and nothing in play. 
+                            Damage dealt to the Horde, and life lost by it instead mills that many cards</li>
+                        <li>On the Horde's turn, instead of drawing, it reveals cards from the top of its library until it reveals a nontoken card. It then casts all of them in the order they were revealed</li>
+                        <li>The Horde's creatures all have haste, and all attack each turn if able</li>
+                    </ul>
+                    <h3>Other Horde Rules</h3>
+                    <ul>
+                        <li>The Horde always has infinite mana</li>
+                        <li>Choices made by the Horde are random</li>
+                    </ul>
+                    <h3>Alternate/Extra Rules</h3>
+                    <h4>Make it Harder</h4>
+                    <ul>
+                        <li>Choices are not random, but follow simple heuristics. It'll resurrect the biggest creature. It'll destroy the biggest creature a Survivor controls. It'll sacrifice the smallest token it can.</li>
+                        <li>Replace random choices by The Horde with consensus decisions by The Survivors.</li>
+                        <li>Allow or disallow The Survivors to attack The Horde during their set-up turns.</li>
+                        <li>Survivors can't attack the Horde at all, only try to outlast it</li>
+                        <li>Tokens don't disappear from the Horde's graveyard, and can be brought back by the many recursion effects</li>
+                        <li>Flip over a fixed number of cards e.g. five each turn. Or flip an increasing number of cards depending on the turn count, or roll a die</li>
+                        <li>Reduce or eliminate the number of setup turns</li>
+                        <li>Each Survivor reduces the life total (reflavor as 'resources') from a maximum of, say, 100 by 20</li>
+                        <li>The Survivors also have to defeat each other (they don't share a lifetotal, and don't go simultaneously)</li>
+                        <li>Decrease the amount of life each of The Survivors contributes to the team.</li>
+                    </ul>
+                    <h4>Make it Easier</h4>
+                    <ul>
+                        <li>Commander damage counts for double</li>
+                        <li>The players can decide to attack the Horde's graveyard instead of the library to 'burn the bodies' (must be ALL damage, cannot be split)</li>
+                        <li>Survivors can attack to "burn the bodies", and exile cards from the Horde's graveyard</li>
+                        <li>Exile a random portion of the Horde Deck prior to the first turn.</li>
+                        <li>You can also add in some cards representing loot that might be gathered by the survivors, I suggest moderately generic equipment, or maybe some walls. Boarded window has a nice flavor aspect to it</li>
+                        <li>The Horde does not have haste</li>
+                    </ul>
+                    <h3>References and Inspirations</h3>
+                    <p>
+                        Basic idea and common rules<br>
+
+                        <a href="https://mtg.fandom.com/wiki/Horde_Magic">Fandom Wiki</a><br>
+                        <a href="https://www.quietspeculation.com/2011/09/horde-magic-a-new-way-to-play-magic-and-survive-zombie-invasions/">Quiet Speculation</a><br>
+
+                        Article from WOTC covering the basics<br>
+                        <a href="https://magic.wizards.com/en/articles/archive/serious-fun/down-down-left-right-left-right-b-shuffle-2011-10-18">WOTC basics</a><br>
+
+
+
+                        Commentary and General Advice<br>
+
+                        An example horde from WOTC, along with commentary on a few games<br>
+                        <a href="https://magic.wizards.com/en/articles/archive/serious-fun/then-we-will-fight-shade-2012-02-21">WOTC Example</a><br>
+
+                        Suggestions from WOTC on adapting the rules and tuning the deck to work as intended<br>
+                        <a href="https://magic.wizards.com/en/articles/archive/serious-fun/stitched-middle-you-2012-02-28">WOTC Tuning</a><br>
+
+                        Powerful additions for making the horde scarier<br>
+                        <a href="http://www.quietspeculation.com/2011/10/horde-magic-an-open-source-project/">Quiet Speculation</a><br>
+
+                        Forum discussion about the horde, includes some decklists<br>
+                        <a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/199661-interesting-variant-horde">MTGSalvation</a><br>
+
+
+                        Horde Decks and Extra Rules<br>
+
+                        Elaborate ruleset for different hordes, plus decklists<br>
+                        <a href="https://homebrewery.naturalcrit.com/share/2C5uPj7L0gMW">Homebrewery</a><br>
+
+                        A challenging ruleset, with decklists and discussion<br>
+                        <a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/variant-commander/490641-zombie-horde-200-card-list">MTGSalvation</a><br>
+
+                        A horde themed around stranger things with rules for the horde's own commanders<br>
+                        <a href="https://tappedout.net/mtg-decks/stranger-things-halloween-zombie-horde/">TappedOut - Stranger Things</a><br>
+
+                        Multicolor horde example with some rules description<br>
+                        <a href="https://tappedout.net/mtg-decks/zombie-horde-deck-co-op-mtg-variant/">TappedOut Horde</a><br>
+
+                        Someone's rule variants<br>
+                        <a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/variant-commander/562594-revised-rules-for-horde">MTGSalvation Rule Variants</a><br>
+                    </p>
+                </div>
+                <div class="content"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <a href="./html/feedback.html">Feedback Page</a>
+            </div>
+        </footer>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="./javascripts/app.js"></script>
+    </body>
+    
+</html>
